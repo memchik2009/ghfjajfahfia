@@ -1,0 +1,242 @@
+{
+	"name": "Список событий 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 759066006298308,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 249973791751671
+				},
+				{
+					"id": "add-to-instvar",
+					"objectClass": "Текст",
+					"sid": 921891027853128,
+					"parameters": {
+						"instance-variable": "СчётчикМонет",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Текст",
+					"sid": 659238717189242,
+					"parameters": {
+						"text": "Текст.СчётчикМонет"
+					}
+				}
+			],
+			"sid": 201364543515629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 643557389616983,
+					"parameters": {
+						"object": "Heal"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-size",
+					"objectClass": "Player",
+					"sid": 972496912009630,
+					"parameters": {
+						"width": "120",
+						"height": "200"
+					}
+				}
+			],
+			"sid": 260836987757170
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 767568115208677,
+					"parameters": {
+						"object": "Heal"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Heal",
+					"sid": 447389844647928
+				}
+			],
+			"sid": 757244128147595
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ТайловыйФон",
+					"sid": 357687794792673,
+					"parameters": {
+						"instance-variable": "Жизни",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 173001226116118
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 541954516280313,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 500852812860686
+				}
+			],
+			"sid": 106964691003311
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 953194906716173,
+					"parameters": {
+						"object": "oneshotspike"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "ТайловыйФон",
+					"sid": 488652777868798,
+					"parameters": {
+						"instance-variable": "Жизни",
+						"value": "-3"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "ТайловыйФон",
+					"sid": 728436386906728,
+					"parameters": {
+						"width": "ТайловыйФон.Width=0"
+					}
+				}
+			],
+			"sid": 251259325660123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 978292394875243,
+					"parameters": {
+						"object": "Heart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "ТайловыйФон",
+					"sid": 780801292912863,
+					"parameters": {
+						"instance-variable": "Жизни",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "ТайловыйФон",
+					"sid": 742960777439748,
+					"parameters": {
+						"width": "ТайловыйФон.Width+37"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Heart",
+					"sid": 751372781693383
+				}
+			],
+			"sid": 801004749929865
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 293549164970638,
+					"parameters": {
+						"object": "перезагрузка"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 583318443404677
+				}
+			],
+			"sid": 445496162410901
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 762769071131122,
+					"parameters": {
+						"object": "Спрайт6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 507881396897132,
+					"parameters": {
+						"layout": "Level 2"
+					}
+				}
+			],
+			"sid": 616264395813884
+		}
+	],
+	"sid": 836570183432151
+}
